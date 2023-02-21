@@ -85,6 +85,28 @@ def image_mars():
                 </body>
             </html>"""
 
+@app.route('/astronaut_selection')
+def astronaut_selection():
+    return f"""<!DOCTYPE html>
+            <html>
+            <head>
+                <title>Привет, Марс!</title>
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+            </head>
+                <body>
+                    <div class="justify-content-center text-center">
+                        <h1 >Анкета претендента</h1>
+                        <h5>на участие в миссии</h5>
+                    </div>
+                    <form method="post" class="bg-warning container-sm justify-content-center h-100">
+                        <input id="surname" type="text" placeholder="Введите фамилию" class="w-100 mt-1">
+                        <input id="name" type="text" placeholder="Введите имя" class="w-100 m-1">
+                        <input id="email" type="text" placeholder="Введите адрес электронной почты" class="w-100 mb-2">
+                    </form>
+                </body>
+            </html>"""
+
+
 
 if __name__ == '__main__':
     app.run(port=8080, host='127.0.0.1')
